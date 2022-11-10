@@ -7,7 +7,7 @@ import sudoku.userinterface.IUserInterfaceContract;
 import java.io.IOException;
 
 public class SudokuApplication extends Application {
-    private IUserInterfaceContract.view uiImpl;
+    private IUserInterfaceContract.View uiImpl;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -16,7 +16,7 @@ public class SudokuApplication extends Application {
         try {
             SudokuBuildLogic.build(uiImpl);
         } catch (IOException e) {
-            e.printStackTrrace();
+            e.printStackTrace();
             throw e;
         }
     }
